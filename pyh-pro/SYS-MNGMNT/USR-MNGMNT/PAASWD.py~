@@ -1,0 +1,9 @@
+#!/usr/bin/python3
+
+import os
+
+x=input("Enter the username : ")
+x=os.system("passwd " + x)
+#os.system("rm /root/Desktop/trash.txt")
+input("press enter to close.......")
+

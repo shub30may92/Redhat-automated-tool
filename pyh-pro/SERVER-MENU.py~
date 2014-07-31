@@ -1,0 +1,63 @@
+#!/usr/bin/python3.1
+
+import os
+import sys
+import getpass
+
+#passwd="lw"
+
+#passin=input("Enter ur password to access :")
+
+#passin=getpass.getpass("Enter ur password to access :  ")
+
+#if passin == passwd :
+while True:
+	os.system('clear')
+	os.system('tput setaf 1')
+	print("\t\t\tWelcome to My Menu Driven System")
+	os.system('tput setaf 0')
+	print("\t\t\t--------------------------------\n\n")
+
+	
+	print("Press 1 : FTP SERVER")
+	print("Press 2 : FTP")
+	print("Press 3 : TELNET SERVER")
+	print("Press 4 : TELNET")
+	print("Press 5 : SSH SERVER")
+	print("Press 6 : SSH")
+	#print("Press 7 : PROCESS MANAGEMENT")		
+	#print("Press 8 : GET A SHELL")
+
+	print ("\n\n")
+
+	ch=int(input("Enter ur choice: "));
+	#print(ch)
+
+	if ch == 1 :
+		os.system("./FTP-SERVER.py")
+	elif ch == 2 :
+		os.system("./FTP-CLIENT.py")
+	elif ch == 3 :
+		os.system("./TELNET-SERVER.py")
+	elif ch == 4 :
+		os.system("./TELNET-CLIENT.py")
+	elif ch == 5 :
+		os.system("./SSH-CLIENT.py")
+	elif ch == 6 :
+		os.system("./SSH-CLIENT.py")
+	#elif ch == 7 :
+		#print(7)
+	#elif ch == 8 :
+		#os.system("gnome-terminal")			
+		#sys.exit()		
+	else:
+		print("option not supported")
+
+
+	input("enter to cont.......")
+
+#else:
+#print("Access Denied")
+#input("press enter to close....")
+
+

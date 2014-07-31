@@ -1,0 +1,34 @@
+#!/usr/bin/python3
+
+import os
+
+y=input("Enter the ip address to be allowed : ")
+os.system("cat /etc/xinetd.conf | grep no_access | grep " + y + "> /root/Desktop/flush.txt")
+j=1
+fflush=open("/root/Desktop/flush.txt" , 'r')
+for j in fflush :
+	pass
+if j == 1 :
+
+	os.system("cat /etc/xinetd.conf | grep only_from | grep " + y + "> /root/Desktop/trash.txt")
+
+	ftrash = open("/root/Desktop/trash.txt", 'r')
+	i=1
+	for i in ftrash :
+		pass
+
+	if i == 1 :
+		print("success")	
+		x=os.system("sed -i -e 's/\tonly_from\t=/\tonly_from\t= "+ y + " /g' /etc/xinetd.conf")
+		x=os.system("sed -i -e 's/#\tonly_from/\tonly_from/g' /etc/xinetd.conf")
+
+	else :
+		print("Already Exist")
+
+	ftrash.close()
+	os.system("rm /root/Desktop/trash.txt")
+else :
+	print("This IP is alredy assigned in ACCESS DENY List")
+
+os.system("rm /root/Desktop/flush.txt")
+input("Enter to close..........")

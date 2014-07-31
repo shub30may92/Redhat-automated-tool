@@ -1,0 +1,20 @@
+#!/usr/bin/python3
+import os
+import sys
+os.system("clear")
+os.system('tput setaf 0');
+x=5;
+while x==5	:
+		print("1.CONNECT TO FTP SERVER");
+		print("2.CREATE YOUR OWN FTP SERVER");
+		print("3.To go back");
+		choice=int(input("Enter your choice :"));
+		if 	choice==1:
+			os.system("python3 FTP-CLIENT.py");
+			os.system("clear");
+		if 	choice==2:
+			os.system("python3 FTP-SERVER.py");
+			os.system("clear");
+		if 	choice==3:
+			os.system("clear");
+			sys.exit();	

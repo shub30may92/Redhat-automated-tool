@@ -1,0 +1,21 @@
+#!/usr/bin/python3
+
+import os
+
+x=input("Enter the username to be added : ")
+x=os.system("useradd " + x + " > /root/Desktop/trash.txt")
+os.system("rm /root/Desktop/trash.txt")
+
+#os.system("echo $? > /root/Desktop/trash.txt")
+#f=open("/root/Desktop/trash.txt" ,'r')
+#x=int(f.read()[:-1])
+#if x == 0 :
+	#print ("User successfully added")
+#elif x == 9 :
+	#print ("USER ALREADY EXIST")
+
+#os.system("rm /root/Desktop/trash.txt")
+
+
+input("Enter to close...")
+

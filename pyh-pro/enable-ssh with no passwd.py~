@@ -1,0 +1,8 @@
+#!/usr/bin/python
+
+import os 
+
+os.system("sed -i 's/#PermitEmptyPasswords no/PermitEmptyPasswords yes/g' /etc/ssh/sshd_config")
+os.system("service sshd restart")
+raw_input("enter to close....")
+
